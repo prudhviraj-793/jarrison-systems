@@ -44,27 +44,66 @@ function CustomerDetails(props) {
         {state && (
           <div className={styles.body2}>
             <div className={styles.tabs}>
-              <button>Tab 1</button>
-              <button>Tab 2</button>
-              <button>Tab 3</button>
-            </div>
-            <form action="" className={styles.form}>
-              <div>
-                <label htmlFor="">Customer Name</label>
-                <input type="text" defaultValue={props.name} name="" id="" />
+              <input
+                type="radio"
+                className={styles.tabsRadio}
+                name="tabs"
+                id="tab1"
+                checked
+              />
+              <label htmlFor="tab1" className={styles.tabsLabel}>
+                Tab 1
+              </label>
+              <div className={styles.tabContent}>
+                <form action="" className={styles.form}>
+                  <div>
+                    <label htmlFor="">Customer Name</label>
+                    <input
+                      type="text"
+                      defaultValue={props.name}
+                      name=""
+                      id=""
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="">Date of Birth</label>
+                    <input
+                      type="date"
+                      defaultValue="1987-04-14"
+                      name=""
+                      id=""
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="">SLA Level</label>
+                    <input type="number" defaultValue="4" name="" id="" />
+                  </div>
+                </form>
+                <div className={styles.active}>
+                  <label htmlFor="">Active</label>
+                  <input type="checkbox" />
+                </div>
               </div>
-              <div>
-                <label htmlFor="">Date of Birth</label>
-                <input type="date" defaultValue="1987-04-14" name="" id="" />
-              </div>
-              <div>
-                <label htmlFor="">SLA Level</label>
-                <input type="number" defaultValue="4" name="" id="" />
-              </div>
-            </form>
-            <div className={styles.active}>
-              <label htmlFor="">Active</label>
-              <input type="checkbox" />
+              <input
+                type="radio"
+                className={styles.tabsRadio}
+                name="tabs"
+                id="tab2"
+              />
+              <label htmlFor="tab2" className={styles.tabsLabel}>
+                Tab 2
+              </label>
+              <div className={styles.tabContent}>tab 2 cntent</div>
+              <input
+                type="radio"
+                className={styles.tabsRadio}
+                name="tabs"
+                id="tab3"
+              />
+              <label htmlFor="tab3" className={styles.tabsLabel}>
+                Tab 3
+              </label>
+              <div className={styles.tabContent}>tab 3 cntent</div>
             </div>
           </div>
         )}

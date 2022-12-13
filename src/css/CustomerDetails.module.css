@@ -95,3 +95,32 @@ input::-webkit-inner-spin-button {
 .form label {
   font-weight: bold;
 }
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tabsRadio {
+  display: none;
+}
+
+.tabContent {
+  order: 1;
+  width: 100%;
+  display: none;
+}
+
+.tabsRadio:checked + .tabsLabel {
+  color: #04aa6d;
+  background-color: white;
+}
+
+.tabsRadio:checked + .tabsLabel + .tabContent {
+  display: block;
+}
+
+.tabsLabel {
+  padding: 0.2em 0.5em;
+  background-color: #dddddd;
+}
